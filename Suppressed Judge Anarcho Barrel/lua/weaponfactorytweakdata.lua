@@ -1,3 +1,11 @@
+_G[ModPath] = _G[ModPath] or {}
+if _G[ModPath][RequiredScript] then return end
+_G[ModPath][RequiredScript] = true
+
+if _G.LegendStats then
+	return
+end
+
 --Anarcho Grip already has no stats so we don't need to do balance it
 --PostHook last function in init, make sure that all attachments and whatnot have been set up.
 Hooks:PostHook(WeaponFactoryTweakData, "_set_inaccessibles", "SupAnarchBar-PostHook-WeaponFactoryTweakData:_set_inaccessibles", function(self)
